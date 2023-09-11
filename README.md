@@ -19,5 +19,5 @@ Uma extensão que oferece suporte para operações GET, POST, POST com imagens e
 - POST<br><img src="WebAPI/img/post.png" width="40%"> <img src="WebAPI/img/postwithimage.png" width="40%"> <img src="WebAPI/img/postdata.png" width="40%">
 
 ### Informações
-- [Baixar Extensão](https://)
-- [Ler a documentação](https://)
+- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/WebAPI/WebAPI.aix)
+- [Ler a documentação](https://josefabriciofigueiredo.github.io/Extensions/WebAPI/doc.html)
