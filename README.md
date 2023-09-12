@@ -13,8 +13,7 @@ Uma extensão que oferece suporte para operações GET, POST, POST com imagens e
 ### Funcionalidades
 - DELETE<br><img src="WebAPI/img/delete.png" width="40%"> <img src="WebAPI/img/deleteData.png" width=40%>
 
-- GET<br><img src="WebAPI/img/get.png" width="40%">
-<img src="WebAPI/img/getData.png" width="40%">
+- GET<br><img src="WebAPI/img/get.png" width="40%"> <img src="WebAPI/img/getData.png" width="40%">
 
 - POST<br><img src="WebAPI/img/post.png" width="40%"> <img src="WebAPI/img/postwithimage.png" width="40%"> <img src="WebAPI/img/postdata.png" width="40%">
 
