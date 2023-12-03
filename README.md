@@ -18,7 +18,7 @@ Uma extensão que oferece suporte para operações GET, POST, POST com imagens e
 - POST<br><img src="WebAPI/img/post.png" width="40%"> <img src="WebAPI/img/postwithimage.png" width="40%"> <img src="WebAPI/img/postdata.png" width="40%">
 
 ### Informações
-- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/WebAPI/WebAPI.aix)
+- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/WebAPI/dados/WebAPI.aix)
 - [Ler a documentação](https://josefabriciofigueiredo.github.io/Extensions/WebAPI/doc.html)
 
 ## - DateHours
@@ -38,5 +38,5 @@ Esta extensão oferece funcionalidades avançadas para manipulação e exibiçã
 - FORMAT<br><img src="DateHours/img/formatDateHours.png" width="40%"> <img src="DateHours/img/formatDate.png" width="40%"><br><img src="DateHours/img/formatHours.png" width="40%">
 
 ### Informações
-- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/WebAPI/WebAPI.aix)
+- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/DateHours/dados/DateHours.aix)
 - [Ler a documentação](https://josefabriciofigueiredo.github.io/Extensions/DateHours/doc.html)
