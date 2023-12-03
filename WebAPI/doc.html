@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>WebAPI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -15,6 +15,10 @@
 
         h4 {
             border-bottom: rgb(163, 163, 163) 1px solid;
+        }
+
+        h1 {
+            margin-bottom: 2vw;
         }
 
         a {
@@ -127,7 +131,7 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <h5 class="fs-5 d-md-none">Arquivos para Baixar</h5>
                         <li class="nav-item ms-3">
-                            <a href="WebAPI.aix" download="WebAPI.aix" class="text-white fs-5">
+                            <a href="dados/WebAPI.aix" download="WebAPI.aix" class="text-white fs-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dropbox"
                                     viewBox="0 0 16 16">
                                     <path
@@ -159,6 +163,7 @@
                         <li class="d-md-none mt-3">
                             <h5 class="fs-5">Extensões</h5>
                             <ul>
+                                <li class="ms-3"><a href="../DateHours/doc.html" class="fs-6 text-white">DateHours</a></li>
                                 <li class="ms-3"><a href="doc.html" class="fs-6 text-white">WebAPI</a></li>
                             </ul>
                         </li>
@@ -174,12 +179,14 @@
             <nav id="nav-apis" class="position-fixed ms-3">
                 <h5 class="fs-5">Extensões</h5>
                 <ul>
+                    <li><a href="../DateHours/doc.html" class="fs-6">DateHours</a></li>
                     <li><a href="doc.html" class="fs-6">WebAPI</a></li>
                 </ul>
             </nav>
         </section>
 
         <section id="s-2" class="col-md-8">
+            <h1>WebAPI</h1>
             <h4 id="item-1">Get</h4>
             <img src="img/get.png">
 
@@ -320,7 +327,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="bg-secondary-subtle">apiUrl</td>
+                        <td class="bg-secondary-subtle">data</td>
                         <td><span class="badge bg-primary">DICIONÁRIO</span></td>
                         <td class="bg-secondary-subtle">Retorna um dicionário com os dados carregados da API.</td>
                     </tr>
@@ -339,16 +346,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="bg-secondary-subtle">apiUrl</td>
+                        <td class="bg-secondary-subtle">data</td>
                         <td><span class="badge bg-success">BOOLEAN</span></td>
                         <td class="bg-secondary-subtle">Retorna um boolean se foi deletado.</td>
                     </tr>
                 </tbody>
             </table>
-
-            <footer>
-
-            </footer>
         </section>
 
         <section id="s-3" class="col-2">

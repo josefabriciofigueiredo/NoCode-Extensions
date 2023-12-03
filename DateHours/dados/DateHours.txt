@@ -1,0 +1,241 @@
+package com.datehours;
+
+import android.app.Activity;
+import android.content.Context;
+import com.google.appinventor.components.annotations.*;
+import com.google.appinventor.components.common.ComponentCategory;
+import com.google.appinventor.components.runtime.AndroidNonvisibleComponent;
+import com.google.appinventor.components.runtime.ComponentContainer;
+import com.google.appinventor.components.runtime.EventDispatcher;
+
+import java.time.Duration;
+import java.time.Period;
+import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+@DesignerComponent(
+        version = 1,
+        description = "",
+        category = ComponentCategory.EXTENSION,
+        nonVisible = true,
+        iconName = "")
+
+@SimpleObject(external = true)
+//Libraries
+@UsesLibraries(libraries = "")
+//Permissions
+@UsesPermissions(permissionNames = "")
+
+public class DateHours extends AndroidNonvisibleComponent {
+
+    DateTimeFormatter formatDataHora = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    DateTimeFormatter formatData = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    DateTimeFormatter formatHora = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+    //Activity and Context
+    private Context context;
+    private Activity activity;
+
+    public DateHours(ComponentContainer container){
+        super(container.$form());
+        this.activity = container.$context();
+        this.context = container.$context();
+    }
+
+    // ----- Date & Hours now -----
+    @SimpleFunction(description = "Current Date and Time")
+    public String dateHoursNow() {
+        return LocalDateTime.now().format(formatDataHora);
+    }
+
+    // ----- Date now -----
+    @SimpleFunction(description = "Current Date")
+    public String dateNow() {
+        return LocalDate.now().format(formatData);
+    }
+
+    // ----- Hours now -----
+    @SimpleFunction(description = "Current Hours")
+    public String hoursNow() {
+        return LocalTime.now().format(formatHora);
+    }
+
+    // ----- Format -----
+    @SimpleFunction(description = "Format Date and Time")
+    public String formatDateHours(String format, String dateHours) {
+        return LocalDateTime.parse(dateHours, formatDataHora).format(DateTimeFormatter.ofPattern(format));
+    }
+
+    @SimpleFunction(description = "Format Date")
+    public String fomartDate(String format, String date) {
+        return LocalDate.parse(date, formatData).format(DateTimeFormatter.ofPattern(format));
+    }
+
+    @SimpleFunction(description = "Format Hours")
+    public String formatHours(String format, String hours) {
+        return LocalTime.parse(hours, formatHora).format(DateTimeFormatter.ofPattern(format));
+    }
+
+    // ----- Compare -----
+    // ----- Compare Date & Hours -----
+    @SimpleFunction(description = "Compare two dates and hours")
+    public void compareDateHours(String startDate, String endDate) {
+        LocalDateTime data1 = LocalDateTime.parse(startDate, formatDataHora);
+        LocalDateTime data2 = LocalDateTime.parse(endDate, formatDataHora);
+
+        Period period = Period.between(data1.toLocalDate(), data2.toLocalDate());
+        long years = period.getYears();
+        long months = period.getMonths();
+        long days = period.getDays();
+
+        Duration duration = Duration.between(data1, data2);
+        long hours = duration.toHours();
+        long minutes = duration.minusHours(hours).toMinutes();
+        long seconds = duration.minusHours(hours).minusMinutes(minutes).getSeconds();
+
+        hours -= compareDateNumDay(data1.format(formatData), data2.format(formatData)) * 24;
+
+        GetDateHours(days, months, years, hours, minutes, seconds);
+    }
+
+    @SimpleEvent(description = "Event to get comparison dates and hours")
+    public void GetDateHours(long days, long months, long years, long hours, long minutes, long seconds) {
+        Object[] args = {days, months, years, hours, minutes, seconds};
+        EventDispatcher.dispatchEvent(this, "GetDateHours", args);
+    }
+
+    @SimpleFunction(description = "Compare two dates and hours")
+    public List<Long> dictCompareDateHours(String startDate, String endDate) {
+        LocalDateTime data1 = LocalDateTime.parse(startDate, formatDataHora);
+        LocalDateTime data2 = LocalDateTime.parse(endDate, formatDataHora);
+
+        Period period = Period.between(data1.toLocalDate(), data2.toLocalDate());
+        long years = period.getYears();
+        long months = period.getMonths();
+        long days = period.getDays();
+
+        Duration duration = Duration.between(data1, data2);
+        long hours = duration.toHours();
+        long minutes = duration.minusHours(hours).toMinutes();
+        long seconds = duration.minusHours(hours).minusMinutes(minutes).getSeconds();
+
+        hours -= compareDateNumDay(data1.format(formatData), data2.format(formatData)) * 24;
+
+        List<Long> calendar = new ArrayList<>();
+        calendar.add(days);
+        calendar.add(months);
+        calendar.add(years);
+        calendar.add(hours);
+        calendar.add(minutes);
+        calendar.add(seconds);
+
+        return calendar;
+    }
+
+    // ----- Compare Date -----
+    @SimpleFunction(description = "Compare two dates")
+    public void compareDate(String startDate, String endDate) {
+        LocalDate data1 = LocalDate.parse(startDate, formatData);
+        LocalDate data2 = LocalDate.parse(endDate, formatData);
+
+        Period period = Period.between(data1, data2);
+
+        int years = period.getYears();
+        int months = period.getMonths();
+        int days = period.getDays();
+
+        GetDate(days, months, years);
+    }
+
+    @SimpleEvent(description = "Event to get comparison dates")
+    public void GetDate(long days, long months, long years) {
+        Object[] args = {days, months, years};
+        EventDispatcher.dispatchEvent(this, "GetDate", args);
+    }
+
+    @SimpleFunction(description = "Compare two dates")
+    public List<Long> dictCompareDate(String startDate, String endDate) {
+        LocalDate data1 = LocalDate.parse(startDate, formatData);
+        LocalDate data2 = LocalDate.parse(endDate, formatData);
+
+        Period period = Period.between(data1, data2);
+        long years = period.getYears();
+        long months = period.getMonths();
+        long days = period.getDays();
+
+        List<Long> calendar = new ArrayList<>();
+        calendar.add(days);
+        calendar.add(months);
+        calendar.add(years);
+
+        return calendar;
+    }
+
+    // ----- Compare Hours -----
+    @SimpleFunction(description = "Compare two hours")
+    public void compareHours(String startHours, String endHours) {
+        LocalTime hora1 = LocalTime.parse(startHours, formatHora);
+        LocalTime hora2 = LocalTime.parse(endHours, formatHora);
+
+        Duration duration = Duration.between(hora1, hora2);
+        long hours = duration.toHours();
+        long minutes = duration.minusHours(hours).toMinutes();
+        long seconds = duration.minusHours(hours).minusMinutes(minutes).getSeconds();
+        
+        GetHours(hours, minutes, seconds);
+    }
+
+    @SimpleEvent(description = "Event to get comparison hours")
+    public void GetHours(long hours, long minutes, long seconds) {
+        Object[] args = {hours, minutes, seconds};
+        EventDispatcher.dispatchEvent(this, "GetHours", args);
+    }
+
+    @SimpleFunction(description = "Compare two hours")
+    public List<Long> dictCompareHours(String startHours, String endHours) {
+        LocalTime hora1 = LocalTime.parse(startHours, formatHora);
+        LocalTime hora2 = LocalTime.parse(endHours, formatHora);
+
+        Duration duration = Duration.between(hora1, hora2);
+        long hours = duration.toHours();
+        long minutes = duration.minusHours(hours).toMinutes();
+        long seconds = duration.minusHours(hours).minusMinutes(minutes).getSeconds();
+
+        List<Long> calendar = new ArrayList<>();
+        calendar.add(hours);
+        calendar.add(minutes);
+        calendar.add(seconds);
+
+        return calendar;
+    }
+
+    // ----- Number of days -----
+    @SimpleFunction(description = "Compare two hours")
+    public long compareDateNumDay(String startDate, String endDate) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            Date data1 = dateFormat.parse(startDate);
+            Date data2 = dateFormat.parse(endDate);
+
+            long diferencaEmMillis = Math.abs(data2.getTime() - data1.getTime());
+
+            long diferencaEmDias = diferencaEmMillis / (24 * 60 * 60 * 1000);
+
+            return diferencaEmDias;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+}
