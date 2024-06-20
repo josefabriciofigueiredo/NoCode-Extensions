@@ -125,7 +125,7 @@
                 }
             },
             "Get Data": {
-                "img": "getdata.png",
+                "img": "getData.png",
                 "tabela": {
                     "data": {
                         "type": "LIST",
@@ -135,7 +135,7 @@
                 }
             },
             "Delete Data": {
-                "img": "deletedata.png",
+                "img": "deleteData.png",
                 "tabela": {
                     "data": {
                         "type": "BOOLEAN",

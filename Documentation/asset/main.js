@@ -155,7 +155,7 @@ fetch('https://raw.githubusercontent.com/josefabriciofigueiredo/NoCode-Extension
 
                     // Imagem
                     var img = document.createElement('img')
-                    img.src = "../../" + diretorio + "/img/" + subtitulos[subtitulo]["img"]
+                    img.src = "https://josefabriciofigueiredo.github.io/NoCode-Extensions/" + diretorio + "/img/" + subtitulos[subtitulo]["img"]
                     document.getElementById("s-2").appendChild(img)
 
                     // Tabela
