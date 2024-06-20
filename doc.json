@@ -4,9 +4,9 @@
         "tutorial": "https://www.youtube.com/embed/cNJLvNwxsx8?si=FLWnm5z-ahwLs5Py",
         "descricao-br": "A extensão permite integrar Kodular e Xano para operações GET, DELETE, POST e PATCH. O tutorial ensina como realizar essas operações e enviar imagens para o banco de dados do Xano, facilitando o desenvolvimento de aplicativos no-code robustos e dinâmicos.",
         "descricao-eua": "The extension facilitates integrating Kodular with Xano for GET, DELETE, POST, and PATCH operations. The tutorial guides users through executing these operations and uploading images to Xano's database, enabling the development of robust and dynamic no-code applications.",
-        "link-extensao": "dados/WebAPI.aia",
-        "link-app": "dados/WebAPI.apk",
-        "link-nix": "dados/WebAPI.nix",
+        "link-extensao": "https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/WebAPI/dados/WebAPI.aia",
+        "link-app": "https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/WebAPI/dados/WebAPI.apk",
+        "link-nix": "https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/WebAPI/dados/WebAPI.nix",
         "diretorio": "WebAPI",
         "conteudo": {
             "Get": {
@@ -171,9 +171,9 @@
         "tutorial": null,
         "descricao-br": "A extensão permite consultar data e hora no dispositivo móvel.",
         "descricao-eua": "The extension allows efficient and accurate date and time queries on mobile devices.",
-        "link-extensao": "dados/DateHours.aia",
-        "link-app": "dados/DateHours.apk",
-        "link-nix": "dados/DateHours.nix",
+        "link-extensao": "https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/DateHours/dados/DateHours.aia",
+        "link-app": "https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/DateHours/dados/DateHours.apk",
+        "link-nix": "https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/DateHours/dados/DateHours.nix",
         "diretorio": "DateHours",
         "conteudo": {
             "dateHoursNow": {

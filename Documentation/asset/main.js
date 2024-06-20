@@ -91,7 +91,7 @@ fetch('https://raw.githubusercontent.com/josefabriciofigueiredo/NoCode-Extension
                         var a_download = document.createElement("a")
                         a_download.classList.add('link-primary', 'link-offset-2', 'link-underline-opacity-25', 'link-underline-opacity-100-hover', 'link-donwload')
                         a_download.innerHTML = object_download[chave]['icon'] + (idiomaSelecionado() == 'BR' ? ' Baixar ' : ' Download ') + object_download[chave]['idioma']
-                        a_download.href = '../../' + diretorio + '/' + object_download[chave]['link']
+                        a_download.href = object_download[chave]['link']
                         li_download.appendChild(a_download)
                         ul_download.appendChild(li_download)
                     }
