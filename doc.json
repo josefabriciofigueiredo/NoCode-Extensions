@@ -1,0 +1,471 @@
+{
+    "WebAPI": {
+        "nome": "WebAPI",
+        "tutorial": "https://www.youtube.com/embed/cNJLvNwxsx8?si=FLWnm5z-ahwLs5Py",
+        "descricao-br": "A extensão permite integrar Kodular e Xano para operações GET, DELETE, POST e PATCH. O tutorial ensina como realizar essas operações e enviar imagens para o banco de dados do Xano, facilitando o desenvolvimento de aplicativos no-code robustos e dinâmicos.",
+        "descricao-eua": "The extension facilitates integrating Kodular with Xano for GET, DELETE, POST, and PATCH operations. The tutorial guides users through executing these operations and uploading images to Xano's database, enabling the development of robust and dynamic no-code applications.",
+        "link-extensao": "dados/WebAPI.aia",
+        "link-app": "dados/WebAPI.apk",
+        "link-nix": "dados/WebAPI.nix",
+        "diretorio": "WebAPI",
+        "conteudo": {
+            "Get": {
+                "img": "get.png",
+                "tabela": {
+                    "apiUrl": {
+                        "type": "TEXT",
+                        "descricao-br": "Url da API.",
+                        "descricao-eua": "API Url"
+                    }
+                }
+            },
+            "Delete": {
+                "img": "delete.png",
+                "tabela": {
+                    "apiUrl": {
+                        "type": "TEXT",
+                        "descricao-br": "Url da API.",
+                        "descricao-eua": "API Url"
+                    },
+                    "id": {
+                        "type": "INT",
+                        "descricao-br": "Número do identificador para selecionar o campo que será apagado.",
+                        "descricao-eua": "Identifier number to select the field to be deleted."
+                    }
+                }
+            },
+            "Post": {
+                "img": "post.png",
+                "tabela": {
+                    "apiUrl": {
+                        "type": "TEXT",
+                        "descricao-br": "Url da API.",
+                        "descricao-eua": "API Url"
+                    },
+                    "values": {
+                        "type": "TEXT",
+                        "descricao-br": "Exemplos de entrada: key=value ou key=value&key2=value2...",
+                        "descricao-eua": "Input examples: key=value or key=value&key2=value2..."
+                    }
+                }
+            },
+            "Post with Image": {
+                "img": "postwithimage.png",
+                "tabela": {
+                    "apiUrl": {
+                        "type": "TEXT",
+                        "descricao-br": "Url da API.",
+                        "descricao-eua": "API Url"
+                    },
+                    "filePath": {
+                        "type": "TEXT",
+                        "descricao-br": "Caminho da imagem. Para facilitar, utiliza o componente Image Picker.",
+                        "descricao-eua": "Image path. To facilitate, use the Image Picker component."
+                    },
+                    "varImageAPI": {
+                        "type": "TEXT",
+                        "descricao-br": "Identificador do tipo 'file' para o local onde a imagem será enviada.",
+                        "descricao-eua": "Identifier of type 'file' for the location where the image will be sent."
+                    },
+                    "values": {
+                        "type": "TEXT",
+                        "descricao-br": "Exemplos de entrada: key=value ou key=value&key2=value2...",
+                        "descricao-eua": "Input examples: key=value or key=value&key2=value2..."
+                    }
+                }
+            },
+            "Patch": {
+                "img": "patch.png",
+                "tabela": {
+                    "apiUrl": {
+                        "type": "TEXT",
+                        "descricao-br": "Url da API.",
+                        "descricao-eua": "API Url"
+                    },
+                    "id": {
+                        "type": "INT",
+                        "descricao-br": "Número do identificador para selecionar o campo que será atualizado.",
+                        "descricao-eua": "Identifier number to select the field that will be updated."
+                    },
+                    "values": {
+                        "type": "TEXT",
+                        "descricao-br": "Exemplos de entrada: key=value ou key=value&key2=value2...",
+                        "descricao-eua": "Input examples: key=value or key=value&key2=value2..."
+                    }
+                }
+            },
+            "Patch with Image": {
+                "img": "patchwithimage.png",
+                "tabela": {
+                    "apiUrl": {
+                        "type": "TEXT",
+                        "descricao-br": "Url da API.",
+                        "descricao-eua": "API Url"
+                    },
+                    "id": {
+                        "type": "INT",
+                        "descricao-br": "Número do identificador para selecionar o campo que será atualizado.",
+                        "descricao-eua": "Identifier number to select the field that will be updated."
+                    },
+                    "filePath": {
+                        "type": "TEXT",
+                        "descricao-br": "Caminho da imagem. Para facilitar, utiliza o componente Image Picker.",
+                        "descricao-eua": "Image path. To facilitate, use the Image Picker component."
+                    },
+                    "varImageAPI": {
+                        "type": "TEXT",
+                        "descricao-br": "Identificador do tipo 'file' para o local onde a imagem será enviada.",
+                        "descricao-eua": "Identifier of type 'file' for the location where the image will be sent."
+                    },
+                    "values": {
+                        "type": "TEXT",
+                        "descricao-br": "Exemplos de entrada: key=value ou key=value&key2=value2...",
+                        "descricao-eua": "Input examples: key=value or key=value&key2=value2..."
+                    }
+                }
+            },
+            "Get Data": {
+                "img": "getdata.png",
+                "tabela": {
+                    "data": {
+                        "type": "LIST",
+                        "descricao-br": "Retorna uma lista com os dicionários.",
+                        "descricao-eua": "Returns a list with dictionaries."
+                    }
+                }
+            },
+            "Delete Data": {
+                "img": "deletedata.png",
+                "tabela": {
+                    "data": {
+                        "type": "BOOLEAN",
+                        "descricao-br": "Retorna um boolean se foi deletado.",
+                        "descricao-eua": "Returns a boolean if it was deleted."
+                    }
+                }
+            },
+            "Post Data": {
+                "img": "postdata.png",
+                "tabela": {
+                    "data": {
+                        "type": "DICTIONARY",
+                        "descricao-br": "Retorna um dicionário com os dados carregados da API.",
+                        "descricao-eua": "Returns a dictionary with data loaded from the API."
+                    }
+                }
+            },
+            "Patch Data": {
+                "img": "patchdata.png",
+                "tabela": {
+                    "data": {
+                        "type": "DICTIONARY",
+                        "descricao-br": "Retorna um dicionário com os dados carregados da API.",
+                        "descricao-eua": "Returns a dictionary with data loaded from the API."
+                    }
+                }
+            }
+        }
+    },
+    "DateHours": {
+        "nome": "DateHours",
+        "tutorial": null,
+        "descricao-br": "A extensão permite consultar data e hora no dispositivo móvel.",
+        "descricao-eua": "The extension allows efficient and accurate date and time queries on mobile devices.",
+        "link-extensao": "dados/DateHours.aia",
+        "link-app": "dados/DateHours.apk",
+        "link-nix": "dados/DateHours.nix",
+        "diretorio": "DateHours",
+        "conteudo": {
+            "dateHoursNow": {
+                "img": "dateHoursNow.png",
+                "tabela": {
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna a data e hora atual no formato 'yyyy-MM-dd HH:mm:ss'.",
+                        "descricao-eua": "Returns the current date and time in the format 'yyyy-MM-dd HH:mm:ss'."
+                    }
+                }
+            },
+            "dateNow": {
+                "img": "dateNow.png",
+                "tabela": {
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna a data atual no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Returns the current date in the format 'yyyy-MM-dd'."
+                    }
+                }
+            },
+            "hoursNow": {
+                "img": "hoursNow.png",
+                "tabela": {
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna a hora atual no formato 'HH:mm:ss'.",
+                        "descricao-eua": "Returns the current time in the format 'HH:mm:ss'."
+                    }
+                }
+            },
+            "compareDateHours": {
+                "img": "compareDateHours.png",
+                "tabela": {
+                    "startDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data e Hora no formato 'yyyy-MM-dd HH:mm:ss'.",
+                        "descricao-eua": "Date and Time in the format 'yyyy-MM-dd HH:mm:ss'."
+                    },
+                    "endDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data e Hora no formato 'yyyy-MM-dd HH:mm:ss'.",
+                        "descricao-eua": "Date and Time in the format 'yyyy-MM-dd HH:mm:ss'."
+                    }
+                }
+            },
+            "GetDateHours": {
+                "img": "GetDateHours.png",
+                "tabela": {
+                    "days": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de dias da comparação.",
+                        "descricao-eua": "Returns the number of days from the comparison."
+                    },
+                    "months": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de meses da comparação.",
+                        "descricao-eua": "Returns the number of months from the comparison."
+                    },
+                    "years": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de anos da comparação.",
+                        "descricao-eua": "Returns the number of years from the comparison."
+                    },
+                    "hours": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de horas da comparação.",
+                        "descricao-eua": "Returns the number of hours from the comparison."
+                    },
+                    "minutes": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de minutos da comparação.",
+                        "descricao-eua": "Returns the number of minutes from the comparison."
+                    },
+                    "seconds": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de segundos da comparação.",
+                        "descricao-eua": "Returns the number of seconds from the comparison."
+                    }
+                }
+            },
+            "compareDate": {
+                "img": "compareDate.png",
+                "tabela": {
+                    "startDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    },
+                    "endDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    }
+                }
+            },
+            "GetDate": {
+                "img": "GetDate.png",
+                "tabela": {
+                    "days": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de dias da comparação.",
+                        "descricao-eua": "Returns the number of days from the comparison."
+                    },
+                    "months": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de meses da comparação.",
+                        "descricao-eua": "Returns the number of months from the comparison."
+                    },
+                    "years": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de anos da comparação.",
+                        "descricao-eua": "Returns the number of years from the comparison."
+                    }
+                }
+            },
+            "compareHours": {
+                "img": "compareHours.png",
+                "tabela": {
+                    "startHours": {
+                        "type": "TEXT",
+                        "descricao-br": "Hora no formato 'HH:mm:ss'.",
+                        "descricao-eua": "Time in the format 'HH:mm:ss'."
+                    },
+                    "endHours": {
+                        "type": "TEXT",
+                        "descricao-br": "Hora no formato 'HH:mm:ss'.",
+                        "descricao-eua": "Time in the format 'HH:mm:ss'."
+                    }
+                }
+            },
+            "GetHours": {
+                "img": "GetHours.png",
+                "tabela": {
+                    "hours": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de horas da comparação.",
+                        "descricao-eua": "Returns the number of hours from the comparison."
+                    },
+                    "minutes": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de minutos da comparação.",
+                        "descricao-eua": "Returns the number of minutes from the comparison."
+                    },
+                    "seconds": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de segundos da comparação.",
+                        "descricao-eua": "Returns the number of seconds from the comparison."
+                    }
+                }
+            },
+            "compareDateNumDay": {
+                "img": "compareDateNumDay.png",
+                "tabela": {
+                    "startDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    },
+                    "endDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    },
+                    "return": {
+                        "type": "INT",
+                        "descricao-br": "Retorna o número de dias da comparação.",
+                        "descricao-eua": "Returns the number of days from the comparison."
+                    }
+                }
+            },
+            "dictCompareDateHours": {
+                "img": "dictCompareDateHours.png",
+                "tabela": {
+                    "startDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data e Hora no formato 'yyyy-MM-dd HH:mm:ss'.",
+                        "descricao-eua": "Date and Time in the format 'yyyy-MM-dd HH:mm:ss'."
+                    },
+                    "endDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data e Hora no formato 'yyyy-MM-dd HH:mm:ss'.",
+                        "descricao-eua": "Date and Time in the format 'yyyy-MM-dd HH:mm:ss'."
+                    },
+                    "return": {
+                        "type": "LIST",
+                        "descricao-br": "Retorna uma lista dos dias, meses, anos, horas, minutos e segundos da comparação.",
+                        "descricao-eua": "Returns a list of days, months, years, hours, minutes, and seconds from the comparison."
+                    }
+                }
+            },
+            "dictCompareDate": {
+                "img": "dictCompareDate.png",
+                "tabela": {
+                    "startDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    },
+                    "endDate": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    },
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna uma lista dos dias, meses e anos da comparação",
+                        "descricao-eua": "Returns a list of days, months, and years from the comparison."
+                    }
+                }
+            },
+            "dictCompareHours": {
+                "img": "dictCompareHours.png",
+                "tabela": {
+                    "startHours": {
+                        "type": "TEXT",
+                        "descricao-br": "Hora no formato 'HH:mm:ss'.",
+                        "descricao-eua": "Time in the format 'HH:mm:ss'."
+                    },
+                    "endHours": {
+                        "type": "TEXT",
+                        "descricao-br": "Hora no formato 'HH:mm:ss'.",
+                        "descricao-eua": "Time in the format 'HH:mm:ss'."
+                    },
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna uma lista das horas, minutos e segundos da comparação.",
+                        "descricao-eua": "Returns a list of hours, minutes, and seconds from the comparison."
+                    }
+                }
+            },
+            "formatDateHours": {
+                "img": "formatDateHours.png",
+                "tabela": {
+                    "format": {
+                        "type": "TEXT",
+                        "descricao-br": "'yyyy': Ano | 'MM': Mês | 'dd': Dia | 'HH': Hora | 'mm': Minuto | 'ss': Segundo. Exemplo: dd/MM/yyyy HH:mm:ss",
+                        "descricao-eua": "'yyyy': Year | 'MM': Month | 'dd': Day | 'HH': Hour | 'mm': Minute | 'ss': Second. Example: dd/MM/yyyy HH:mm:ss"
+                    },
+                    "dateHours": {
+                        "type": "TEXT",
+                        "descricao-br": "Data e Hora no formato 'yyyy-MM-dd HH:mm:ss'.",
+                        "descricao-eua": "Date and Time in the format 'yyyy-MM-dd HH:mm:ss'."
+                    },
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna sua data e hora no formato que digitou no campo 'format'.",
+                        "descricao-eua": "Returns your date and time in the format entered in the 'format' field."
+                    }
+                }
+            },
+            "formatDate": {
+                "img": "formatDate.png",
+                "tabela": {
+                    "format": {
+                        "type": "TEXT",
+                        "descricao-br": "'yyyy': Ano | 'MM': Mês | 'dd': Dia. Exemplo: dd/MM/yyyy",
+                        "descricao-eua": "'yyyy': Year | 'MM': Month | 'dd': Day. Example: dd/MM/yyyy"
+                    },
+                    "date": {
+                        "type": "TEXT",
+                        "descricao-br": "Data no formato 'yyyy-MM-dd'.",
+                        "descricao-eua": "Date in the format 'yyyy-MM-dd'."
+                    },
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna sua data no formato que digitou no campo 'format'.",
+                        "descricao-eua": "Returns your date in the format entered in the 'format' field."
+                    }
+                }
+            },
+            "formatHours": {
+                "img": "formatHours.png",
+                "tabela": {
+                    "format": {
+                        "type": "TEXT",
+                        "descricao-br": "'HH': Hora | 'mm': Minuto | 'ss': Segundo. Exemplo: HH:mm:ss",
+                        "descricao-eua": "'HH': Hour | 'mm': Minute | 'ss': Second. Example: HH:mm:ss"
+                    },
+                    "hours": {
+                        "type": "TEXT",
+                        "descricao-br": "Hora no formato 'HH:mm:ss'.",
+                        "descricao-eua": "Time in the format 'HH:mm:ss'."
+                    },
+                    "return": {
+                        "type": "TEXT",
+                        "descricao-br": "Retorna sua hora no formato que digitou no campo 'format'.",
+                        "descricao-eua": "Returns your time in the format entered in the 'format' field."
+                    }
+                }
+            }
+        }
+    }
+}

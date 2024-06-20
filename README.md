@@ -1,42 +1,44 @@
-# Extensão para Kodular e Niotron
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/josefabriciofigueiredo/Extensions/blob/main/LICENSE)
+# Extension for Kodular and Niotron
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/josefabriciofigueiredo/NoCode-Extensions/blob/main/LICENSE)
 
 ## - WebAPI
 
-### Sobre
-Uma extensão que oferece suporte para operações GET, POST, POST com imagens e DELETE em APIs de forma fácil.
+### About
+An extension that facilitates GET, POST, POST with images, PATCH, PATCH with images, and DELETE operations in APIs.
 
-### Tecnologias utilizadas
+### Technologies Used
 - Java
 - https://ide.niotron.com/
 
-### Funcionalidades
+### Functions
 - DELETE<br><img src="WebAPI/img/delete.png" width="40%"> <img src="WebAPI/img/deleteData.png" width=40%>
 
 - GET<br><img src="WebAPI/img/get.png" width="40%"> <img src="WebAPI/img/getData.png" width="40%">
 
 - POST<br><img src="WebAPI/img/post.png" width="40%"> <img src="WebAPI/img/postwithimage.png" width="40%"> <img src="WebAPI/img/postdata.png" width="40%">
 
-### Informações
-- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/WebAPI/dados/WebAPI.aix)
-- [Ler a documentação](https://josefabriciofigueiredo.github.io/Extensions/WebAPI/doc.html)
+- PATCH<br><img src="WebAPI/img/patch.png" width="40%"> <img src="WebAPI/img/patchwithimage.png" width="40%"> <img src="WebAPI/img/patchdata.png" width="40%">
+
+### Information
+- [Download Extension](https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/WebAPI/dados/WebAPI.aix)
+- [Read the documentation](https://josefabriciofigueiredo.github.io/NoCode-Extensions/Documentation/doc.html?pag=WebAPI&lang=BR")
 
 ## - DateHours
 
-### Sobre
-Esta extensão oferece funcionalidades avançadas para manipulação e exibição de data e hora.
+### About
+This extension provides advanced functionalities for manipulating and displaying date and time.
 
-### Tecnologias utilizadas
+### Technologies Used
 - Java
 - https://ide.niotron.com/
 
-### Funcionalidades
+### Functions
 - GET DATE OR HOURS<br><img src="DateHours/img/dateHoursNow.png" width="40%"> <img src="DateHours/img/dateNow.png" width=40%><br><img src="DateHours/img/hoursNow.png" width=40%>
 
-- COMPARE DATE OR HOURS<br><img src="DateHours/img/compareDateNumDay.png" width="40%"> <img src="DateHours/img/compareHours.png" width=40%><br><img src="DateHours/img/compareDateHours.png" width=40%> <img src="DateHours/img/compareDate.png" width=40%><br><img src="DateHours/img/dictCompareDataHours.png" width="40%"> <img src="DateHours/img/dictCompareDate.png" width="40%"><br><img src="DateHours/img/dictCompareHours.png" width="40%"><br><img src="DateHours/img/GetHours.png" width="40%"> <img src="DateHours/img/GetDate.png" width="40%"><br><img src="DateHours/img/GetDateHours.png" width="40%">
+- COMPARE DATE OR HOURS<br><img src="DateHours/img/compareDateNumDay.png" width="40%"> <img src="DateHours/img/compareHours.png" width=40%><br><img src="DateHours/img/compareDateHours.png" width=40%> <img src="DateHours/img/compareDate.png" width=40%><br><img src="DateHours/img/dictCompareDateHours.png" width="40%"> <img src="DateHours/img/dictCompareDate.png" width="40%"><br><img src="DateHours/img/dictCompareHours.png" width="40%"><br><img src="DateHours/img/GetHours.png" width="40%"> <img src="DateHours/img/GetDate.png" width="40%"><br><img src="DateHours/img/GetDateHours.png" width="40%">
 
 - FORMAT<br><img src="DateHours/img/formatDateHours.png" width="40%"> <img src="DateHours/img/formatDate.png" width="40%"><br><img src="DateHours/img/formatHours.png" width="40%">
 
-### Informações
-- [Baixar Extensão](https://github.com/josefabriciofigueiredo/Extensions/raw/main/WebAPI/dados/WebAPI.aix)
-- [Ler a documentação](https://josefabriciofigueiredo.github.io/Extensions/DateHours/doc.html)
+### Information
+- [Download Extension](https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/DateHours/dados/DateHours.aix)
+- [Read the documentation](https://josefabriciofigueiredo.github.io/NoCode-Extensions/Documentation/doc.html?pag=DateHours&lang=BR")
