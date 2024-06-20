@@ -21,7 +21,7 @@ An extension that facilitates GET, POST, POST with images, PATCH, PATCH with ima
 
 ### Information
 - [Download Extension](https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/WebAPI/dados/WebAPI.aix)
-- [Read the documentation](https://josefabriciofigueiredo.github.io/NoCode-Extensions/Documentation/doc.html?pag=WebAPI&lang=BR")
+- [Read the documentation](https://josefabriciofigueiredo.github.io/NoCode-Extensions/Documentation/doc.html?pag=WebAPI&lang=BR)
 
 ## - DateHours
 
@@ -41,4 +41,4 @@ This extension provides advanced functionalities for manipulating and displaying
 
 ### Information
 - [Download Extension](https://github.com/josefabriciofigueiredo/NoCode-Extensions/raw/main/DateHours/dados/DateHours.aix)
-- [Read the documentation](https://josefabriciofigueiredo.github.io/NoCode-Extensions/Documentation/doc.html?pag=DateHours&lang=BR")
+- [Read the documentation](https://josefabriciofigueiredo.github.io/NoCode-Extensions/Documentation/doc.html?pag=DateHours&lang=BR)

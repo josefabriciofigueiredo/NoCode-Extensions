@@ -20,7 +20,7 @@ function atualizarIdiomaPagina() {
 }
 atualizarIdiomaPagina()
 
-fetch('../../doc.json')
+fetch('https://raw.githubusercontent.com/josefabriciofigueiredo/NoCode-Extensions/main/doc.json')
     .then(response => response.json())
     .then(data => {
         var pagina_encontrada = false
